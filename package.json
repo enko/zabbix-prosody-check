@@ -1,0 +1,10 @@
+{ "name": "xmpp-check"
+, "version": "0.0.1"
+, "engines": ["node >= 0.8.0"]
+, "main": "index.js"
+, "dependencies":
+  { "node-xmpp":              "*",
+    "node-stringprep":        "*",
+    "zabbix-sender":     "git://github.com/enko/node-zabbix-sender.git"
+  }
+}

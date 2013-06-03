@@ -1,0 +1,15 @@
+* Prosody checkscript for zabbix
+
+** Description
+
+This script collects the amount of connected users and the time it
+needs to fetch this information and pushes the two information bits to
+zabbix.
+
+** Install
+
+git clone zabbix-xmpp-check
+cd zabbix-xmpp-check
+npm install
+cp config.js.dist config.js
+$EDITOR config.js

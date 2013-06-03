@@ -1,0 +1,12 @@
+exports.config = {
+    server : "127.0.0.1",
+    real_server : "example.com",
+    user : "xmpp-check@example.com/check",
+    password : "",
+    debug: false,
+    zabbix: {
+        hostname : 'xmpp'
+    }
+};
+
+exports.config = config;
