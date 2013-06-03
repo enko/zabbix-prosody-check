@@ -9,9 +9,11 @@ zabbix.
 ** Install
 
 #+begin_src shell
+
 git clone zabbix-prosody-check
 cd zabbix-prosody-check
 npm install
 cp config.js.dist config.js
 $EDITOR config.js
+
 #+end_src
