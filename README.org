@@ -8,8 +8,10 @@ zabbix.
 
 ** Install
 
+#+begin_src shell
 git clone zabbix-xmpp-check
 cd zabbix-xmpp-check
 npm install
 cp config.js.dist config.js
 $EDITOR config.js
+#+end_src
