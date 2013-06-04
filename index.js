@@ -81,7 +81,8 @@ c.on('stanza',function(stanza){
       if (config.debug) util.log(node);
       c.send(node);
     } else if (command.attrs.status == 'completed') {
-      var count = command.children[0].children[1].children.length -1;
+      // remove ourself, so we get accurate results
+      var count = command.children[0].children[1].children.length - 1;
 
       var sender       = new ZabbixSender({
         'hostname' : config.zabbix.hostname,
