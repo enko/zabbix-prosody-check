@@ -80,7 +80,8 @@ c.on('stanza',function(stanza){
     } else if (command.attrs.status == 'completed') {
       // remove ourself, so we get accurate results
       var count = command.children[0].children[1].children.length - 1;
-
+      var time_elapsed = elapsed_time();
+      if (config.debug) util.log([count,time_elapsed]);
       var sender       = new ZabbixSender({
         'hostname' : config.zabbix.hostname,
         'bin' : '/opt/zabbix/bin/zabbix_sender',
@@ -88,7 +89,7 @@ c.on('stanza',function(stanza){
       });
       sender.send({
         'prosody_users': count,
-        'prosody_users_time': elapsed_time()
+        'prosody_users_time': time_elapsed
       }, function(err,stdout,stderr) {
         if (err) throw err;
         if (config.debug) util.log(stdout);
