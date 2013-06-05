@@ -66,17 +66,14 @@ c.on('stanza',function(stanza){
         xmlns:"jabber:x:data",
         type:"submit"
       }).c('field',{
-        "var": 'FORM_TYPE',
-        type: 'hidden'
+        "var": 'FORM_TYPE'
       }).c('value').t('http://jabber.org/protocol/admin').up().up()
           .c('field',{
-            "var": 'max_items',
-            type: 'list-single'
+            "var": 'max_items'
           })
           .c('value').t('all').up().up()
           .c('field',{
-            "var": "details",
-            type: "boolean"
+            "var": "details"
           }).c('value').t('false').up().up().up().up();
       if (config.debug) util.log(node);
       c.send(node);
