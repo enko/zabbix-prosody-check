@@ -30,7 +30,7 @@ c.on('online', function() {
     type: 'set',
     id: 116
   }).c('command', { 
-    node : "http://jabber.org/protocol/admin#get-online-users",
+    node : "http://jabber.org/protocol/admin#get-online-users-list",
     xmlns: "http://jabber.org/protocol/commands",
     action: "execute"
   }).up();
@@ -58,7 +58,7 @@ c.on('stanza',function(stanza){
         to: config.real_server,
         id: 117 
       }).c('command',{
-        node : "http://jabber.org/protocol/admin#get-online-users",
+        node : "http://jabber.org/protocol/admin#get-online-users-list",
         xmlns: "http://jabber.org/protocol/commands",
         action: "next",
         sessionid:sessionid
